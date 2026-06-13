@@ -11,10 +11,10 @@ and access mental health resources and wellness tips.
 The platform aims to create awareness about mental health and encourage healthy coping strategies through an easy-to-use digital environment.
 It provides a secure space where users can regularly monitor their emotional state and view their progress over time.
 # PROJECT OBJECTIVES
-# Main Objective
+## Main Objective
 To develop a secure and user-friendly Digital Mental Health Support System that helps users monitor their emotional well-being
 and access mental health support resources.
-# Specific Objectives
+## Specific Objectives
   1. Enable user registration and authentication.
   2. Track daily mood and emotional status.
   3. Conduct mental health self-assessment questionnaires.
@@ -48,3 +48,65 @@ The Admin Module is responsible for managing the overall system and ensuring smo
 * Wellness Tips Management
 * Report Generation
 * System Monitoring
+
+# CRUD APIs
+## User APIs
+## Create
+* Register User
+* Add Journal Entry
+* Record Mood
+## Read
+* View Profile
+* View Mood History
+* View Assessment Results
+* View Tips
+## Update
+* Update Profile
+* Update Journal Entry
+## Delete
+* Delete Journal Entry
+* Delete User Account
+
+# Table list
+## User
+| Field    | Type    |
+| -------- | ------- |
+| user_id  | INT     |
+| name     | VARCHAR |
+| email    | VARCHAR |
+| password | VARCHAR |
+| age      | INT     |
+## Mood_Tracker
+| Field   | Type    |
+| ------- | ------- |
+| mood_id | INT     |
+| user_id | INT     |
+| mood    | VARCHAR |
+| date    | DATE    |
+## Assessment
+| Field         | Type |
+| ------------- | ---- |
+| assessment_id | INT  |
+| user_id       | INT  |
+| score         | INT  |
+| date          | DATE |
+## Journal
+| Field      | Type |
+| ---------- | ---- |
+| journal_id | INT  |
+| user_id    | INT  |
+| content    | TEXT |
+| date       | DATE |
+## Tips
+| Field       | Type    |
+| ----------- | ------- |
+| tip_id      | INT     |
+| title       | VARCHAR |
+| description | TEXT    |
+
+
+
+
+
+
+
