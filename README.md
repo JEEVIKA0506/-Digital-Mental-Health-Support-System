@@ -104,6 +104,136 @@ The Admin Module is responsible for managing the overall system and ensuring smo
 | title       | VARCHAR |
 | description | TEXT    |
 
+# ER DIAGRAM DESIGN
+## Entities
+* USER
+* MOOD_TRACKER
+* ASSESSMENT
+* JOURNAL
+* TIPS
+* ADMIN
+## Relationships
+* USER records MOOD_TRACKER
+* USER takes ASSESSMENT
+* USER writes JOURNAL
+* ADMIN manages TIPS
+* ADMIN manages USERS
+
+# ER Diagram
+USER
+ ├── user_id (PK)
+ ├── name
+ ├── email
+ └── password
+      |
+      | 1:M
+      |
+MOOD_TRACKER
+
+USER
+      |
+      | 1:M
+      |
+ASSESSMENT
+
+USER
+      |
+      | 1:M
+      |
+JOURNAL
+
+ADMIN
+      |
+      | 1:M
+      |
+TIPS
+# Use Case Diagram 
+   +-------------------+
+   |  Mental Health    |
+   | Support System    |
+   +-------------------+
+
+USER
+ ├── Register
+ ├── Login
+ ├── Track Mood
+ ├── Take Assessment
+ ├── Write Journal
+ ├── View Tips
+ ├── View Reports
+ └── Logout
+
+ADMIN
+ ├── Login
+ ├── Manage Users
+ ├── Manage Tips
+ ├── View Reports
+ ├── Monitor Activities
+ └── Logout
+
+ # SQL SCHEMA CREATION
+
+The SQL schema defines the database structure for the Digital Mental Health Support System. It includes tables for storing user information, mood records, assessments, journal entries, and wellness tips.
+
+## User Table
+
+```sql
+CREATE TABLE User (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    age INT
+);
+```
+
+## Mood_Tracker Table
+
+```sql
+CREATE TABLE Mood_Tracker (
+    mood_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    mood VARCHAR(50),
+    date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+```
+
+## Assessment Table
+
+```sql
+CREATE TABLE Assessment (
+    assessment_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    score INT,
+    date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+```
+
+## Journal Table
+
+```sql
+CREATE TABLE Journal (
+    journal_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    content TEXT,
+    date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+```
+
+## Tips Table
+
+```sql
+CREATE TABLE Tips (
+    tip_id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100),
+    description TEXT
+);
+```
+
+
 
 
 
