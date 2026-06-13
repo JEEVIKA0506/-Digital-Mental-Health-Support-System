@@ -205,6 +205,50 @@ CREATE TABLE Tips (
 );
 ```
 
+# PAGE LAYOUTS
+## Home Page
+* Welcome Message
+* About System
+* Login/Register Buttons
+## Dashboard
+* Mood Tracker
+* Assessment Section
+* Journal Section
+* Tips Section
+## Profile Page
+* User Details
+* Progress Report
+## Admin Dashboard
+* User Management
+* Resource Management
+* Reports
+
+## UI SCREENS
+ 1. Login Screen
+ 2. Registration Screen
+ 3. User Dashboard
+ 4. Mood Tracking Screen
+ 5. Assessment Screen
+ 6. Journal Screen
+ 7. Tips Screen
+ 8. Profile Screen
+ 9. Admin Dashboard
+
+# UI PROTOTYPE
+## Navigation Flow     
+    Home
+     │
+     ├── Login
+     │     │
+     │     └── Dashboard
+     │            │
+     │            ├── Mood Tracker
+     │            ├── Assessment
+     │            ├── Journal
+     │            ├── Tips
+     │            └── Profile
+     │
+     └── Register
 
 
 
