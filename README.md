@@ -119,57 +119,29 @@ The Admin Module is responsible for managing the overall system and ensuring smo
 * ADMIN manages TIPS
 * ADMIN manages USERS
 
-# ER Diagram
-USER
- ├── user_id (PK)
- ├── name
- ├── email
- └── password
-      |
-      | 1:M
-      |
-MOOD_TRACKER
-
-USER
-      |
-      | 1:M
-      |
-ASSESSMENT
-
-USER
-      |
-      | 1:M
-      |
-JOURNAL
-
-ADMIN
-      |
-      | 1:M
-      |
-TIPS
 # Use Case Diagram 
-   +-------------------+
-   |  Mental Health    |
-   | Support System    |
-   +-------------------+
+    +-------------------+
+    |  Mental Health    |
+    | Support System    |
+    +-------------------+
 
-USER
- ├── Register
- ├── Login
- ├── Track Mood
- ├── Take Assessment
- ├── Write Journal
- ├── View Tips
- ├── View Reports
- └── Logout
+    USER
+      ├── Register
+      ├── Login
+      ├── Track Mood
+      ├── Take Assessment
+      ├── Write Journal
+      ├── View Tips
+      ├── View Reports
+      └── Logout
 
-ADMIN
- ├── Login
- ├── Manage Users
- ├── Manage Tips
- ├── View Reports
- ├── Monitor Activities
- └── Logout
+    ADMIN
+      ├── Login
+      ├── Manage Users
+      ├── Manage Tips
+      ├── View Reports
+      ├── Monitor Activities
+      └── Logout
 
  # SQL SCHEMA CREATION
 
