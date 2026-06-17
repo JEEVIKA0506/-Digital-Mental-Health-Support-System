@@ -250,6 +250,104 @@ CREATE TABLE Tips (
      │
      └── Register
 
+# LOGIN MODULE
+
+## Overview
+
+The Login Module is responsible for authenticating registered users and providing secure access to the Digital Mental Health Support System. It verifies user credentials before granting access to the application dashboard.
+
+## Features
+
+* User authentication
+* Email and password validation
+* Error handling for invalid credentials
+* Secure dashboard access
+* Session management
+
+## Components Used
+
+* Email Input Field
+* Password Input Field
+* Login Button
+* Validation Messages
+
+## Workflow
+
+1. User enters registered email and password.
+2. System validates the entered credentials.
+3. If credentials are correct, the user is redirected to the dashboard.
+4. If credentials are invalid, an error message is displayed.
+
+## Expected Outcome
+
+A secure login system that allows only authorized users to access the platform and its features.
+
+## Deliverable
+
+Functional Login Page with Authentication.
+     
+# REGISTRATION MODULE
+
+## Overview
+
+The Registration Module allows new users to create an account within the Digital Mental Health Support System. The module collects user information and stores it securely in the database for future authentication and access.
+
+## Features
+
+* New user registration
+* Form validation
+* Duplicate email verification
+* Secure data storage
+* User account creation
+
+## Registration Fields
+
+* Full Name
+* Email Address
+* Password
+* Confirm Password
+* Age
+
+## Workflow
+
+1. User fills in the registration form.
+2. System validates all required fields.
+3. Duplicate email addresses are checked.
+4. User information is stored in the database.
+5. Registration is completed successfully.
+
+# DASHBOARD DEVELOPMENT
+
+## Overview
+
+The Dashboard is the main interface of the Digital Mental Health Support System. After successful login, users are redirected to this page where they can access all major functionalities of the application.
+
+The dashboard is designed to provide a simple and organized view of mental health activities and resources.
+
+## Dashboard Sections
+
+* Mood Tracking
+* Self-Assessment
+* Journal Entries
+* Wellness Tips
+* Progress Reports
+* Profile Management
+
+## Key Functions
+
+* Quick navigation to all modules
+* Display of user activities
+* Access to mental health resources
+* Overview of emotional well-being records
+
+## User Flow
+
+1. User logs into the system.
+2. Dashboard loads user information.
+3. User selects desired module.
+4. System redirects to the corresponding feature page.
+
+
 
 
 
