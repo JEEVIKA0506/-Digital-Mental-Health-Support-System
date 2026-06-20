@@ -1,3 +1,10 @@
+## Dashboard Screenshot
+
+![Dashboard](dashboard.png)
+
+
+
+
 # DASHBOARD 
 function App() {
   const cardStyle = {
