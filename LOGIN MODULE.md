@@ -166,7 +166,7 @@ The Login Module provides secure access to registered users of the Digital Menta
 
 ## Screenshot
 
-![Login Module](login-module.png)
+![Login Module](login_module.png)
 
 ## Deliverable
 
