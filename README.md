@@ -347,7 +347,149 @@ The dashboard is designed to provide a simple and organized view of mental healt
 3. User selects desired module.
 4. System redirects to the corresponding feature page.
 
+# CRUD FORM DEVELOPMENT
 
+## Overview
+
+CRUD operations (Create, Read, Update, Delete) are implemented to manage user records and application data efficiently. These forms allow users and administrators to interact with the database through a structured interface.
+
+## Implemented Operations
+
+### Create
+
+* Add Mood Entry
+* Create Journal Entry
+* Submit Assessment
+
+### Read
+
+* View Mood Records
+* View Assessment History
+* View Journal Entries
+
+### Update
+
+* Edit Profile Information
+* Update Journal Entries
+
+### Delete
+
+* Remove Journal Entries
+* Delete Selected Records
+
+## Form Features
+
+* Input Validation
+* Error Handling
+* Database Integration
+* User-Friendly Interface
+
+
+
+# TABLE AND SEARCH FEATURES
+
+## Overview
+
+The Table and Search Module is developed to display stored data in a structured format and provide quick retrieval of information through search functionality.
+
+## Data Tables
+
+* Mood Tracking Records
+* Assessment Results
+* Journal Entries
+* User Information
+
+## Search Features
+
+* Search by Name
+* Search by Email
+* Search by Date
+* Keyword-Based Search
+
+## Functionalities
+
+* Dynamic Data Listing
+* Record Filtering
+* Search Result Display
+* Improved Data Accessibility
+
+## Workflow
+
+1. User accesses a data table.
+2. Search criteria are entered.
+3. System filters matching records.
+4. Results are displayed instantly.
+
+
+
+# FRONTEND TESTING
+
+## Overview
+
+Frontend testing is conducted to verify that all user interface components function correctly and provide a smooth user experience. The testing process ensures that pages load properly and user interactions behave as expected.
+
+## Modules Tested
+
+* Login Page
+* Registration Page
+* Dashboard
+* CRUD Forms
+* Search Features
+* Navigation Components
+
+## Testing Activities
+
+* Form Validation Testing
+* Button Functionality Testing
+* Page Navigation Testing
+* Responsive Design Testing
+* Error Message Verification
+
+## Observations
+
+* All pages loaded successfully.
+* Navigation links functioned correctly.
+* Form validations worked as expected.
+* No major UI issues were identified.
+
+# SPRING BOOT PROJECT SETUP
+
+## Overview
+
+Spring Boot is used to develop the backend services of the Digital Mental Health Support System. The framework simplifies backend development by providing built-in configurations, dependency management, and REST API support.
+
+## Tools and Technologies
+
+* Java
+* Spring Boot
+* Maven
+* MySQL
+* IntelliJ IDEA / VS Code
+
+## Initial Setup
+
+### Dependencies Added
+
+* Spring Web
+* Spring Data JPA
+* MySQL Driver
+* Spring Boot DevTools
+
+### Project Structure
+
+* Controller Layer
+* Service Layer
+* Repository Layer
+* Model Layer
+* Configuration Layer
+
+## Backend Responsibilities
+
+* User Authentication
+* Database Operations
+* API Management
+* Data Processing
+* Business Logic Handling
 
 
 
