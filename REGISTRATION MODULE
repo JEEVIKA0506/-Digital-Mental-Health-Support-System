@@ -1,0 +1,29 @@
+# REGISTRATION MODULE
+
+## Overview
+
+The Registration Module enables users to create a personalized wellness profile within the Digital Mental Health Support System. Users can enter their details, choose their stress level, and select preferred wellness activities.
+
+## Features
+
+- User Registration
+- Stress Level Selection
+- Wellness Activity Preference
+- Password Validation
+- Personalized Wellness Profile
+
+## Workflow
+
+1. User enters personal information.
+2. User selects stress level.
+3. User chooses a wellness activity.
+4. System validates inputs.
+5. Profile is created successfully.
+
+## Registration Module Screenshot
+
+![Registration Module](registration-module.png)
+
+## Deliverable
+
+Mental Wellness Registration Module Successfully Developed.
