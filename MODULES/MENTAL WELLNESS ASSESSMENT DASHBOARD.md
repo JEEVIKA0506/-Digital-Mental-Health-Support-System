@@ -273,7 +273,7 @@ The system generates a comprehensive Mental Wellness Report containing category-
 
 ## Screenshot
 
-![Mental Wellness Assessment Dashboard](Mental Wellness _Assessment Dashboard.png)
+![Mental Wellness Assessment Dashboard](mental-wellness-assessment-dashboard.png)
 
 ---
 
