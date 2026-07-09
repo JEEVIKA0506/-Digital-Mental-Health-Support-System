@@ -1,0 +1,43 @@
+export const translations = {
+  English: {
+    dashboard: "Dashboard",
+    moodTracker: "Mood Tracker",
+    journal: "Journal",
+    assessment: "Assessment",
+    analytics: "Analytics",
+    profile: "Profile",
+    settings: "Settings",
+    supportHub: "Support Hub",
+    report: "Wellness Report",
+    darkMode: "Enable Dark Mode",
+    language: "Language Preference",
+  },
+
+  Tamil: {
+    dashboard: "டாஷ்போர்டு",
+    moodTracker: "மனநிலை கண்காணிப்பு",
+    journal: "தனிப்பட்ட குறிப்பேடு",
+    assessment: "மதிப்பீடு",
+    analytics: "பகுப்பாய்வு",
+    profile: "சுயவிவரம்",
+    settings: "அமைப்புகள்",
+    supportHub: "ஆதரவு மையம்",
+    report: "நலன் அறிக்கை",
+    darkMode: "டார்க் மோடு",
+    language: "மொழி விருப்பம்",
+  },
+
+  Hindi: {
+    dashboard: "डैशबोर्ड",
+    moodTracker: "मूड ट्रैकर",
+    journal: "जर्नल",
+    assessment: "मूल्यांकन",
+    analytics: "विश्लेषण",
+    profile: "प्रोफ़ाइल",
+    settings: "सेटिंग्स",
+    supportHub: "सहायता केंद्र",
+    report: "वेलनेस रिपोर्ट",
+    darkMode: "डार्क मोड",
+    language: "भाषा चयन",
+  },
+};
