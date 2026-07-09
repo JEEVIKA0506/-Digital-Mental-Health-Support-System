@@ -68,3 +68,501 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Project title 
+Digital-Mental-Health-Support-System
+# Problem Statement :
+Students and individuals often experience stress, anxiety, and emotional challenges but lack an accessible platform to monitor their mental 
+well-being and obtain timely support. There is a need for a digital system that enables mood tracking, self-assessment, and access to mental
+health resources in a secure and user-friendly manner.
+# PROJECT OVERVIEW
+The Digital Mental Health Support System is a web-based application designed to support users in monitoring and improving their mental
+well-being. The system allows users to track their daily moods, complete self-assessment questionnaires, maintain personal journals,
+and access mental health resources and wellness tips.
+The platform aims to create awareness about mental health and encourage healthy coping strategies through an easy-to-use digital environment.
+It provides a secure space where users can regularly monitor their emotional state and view their progress over time.
+# PROJECT OBJECTIVES
+## Main Objective
+To develop a secure and user-friendly Digital Mental Health Support System that helps users monitor their emotional well-being
+and access mental health support resources.
+## Specific Objectives
+  1. Enable user registration and authentication.
+  2. Track daily mood and emotional status.
+  3. Conduct mental health self-assessment questionnaires.
+  4. Provide wellness tips and mental health resources.
+  5. Store mood history and assessment records.
+  6. Generate user progress reports.
+  7. Ensure privacy and security of user data.
+  8. Promote mental health awareness.
+#  MODULE LIST
+
+
+## User Module
+
+The User Module is responsible for providing functionalities that allow users to interact with the Digital Mental Health Support System. The key features include:
+
+* User Registration
+* User Login
+* Profile Management
+* Mood Tracking
+* Self-Assessment
+* Journal Management
+* Progress Report Viewing
+
+## Admin Module
+
+The Admin Module is responsible for managing the overall system and ensuring smooth operation. The key features include:
+
+* Admin Login
+* User Management
+* Mental Health Resource Management
+* Wellness Tips Management
+* Report Generation
+* System Monitoring
+
+# CRUD APIs
+## User APIs
+## Create
+* Register User
+* Add Journal Entry
+* Record Mood
+## Read
+* View Profile
+* View Mood History
+* View Assessment Results
+* View Tips
+## Update
+* Update Profile
+* Update Journal Entry
+## Delete
+* Delete Journal Entry
+* Delete User Account
+
+# Table list
+## User
+| Field    | Type    |
+| -------- | ------- |
+| user_id  | INT     |
+| name     | VARCHAR |
+| email    | VARCHAR |
+| password | VARCHAR |
+| age      | INT     |
+## Mood_Tracker
+| Field   | Type    |
+| ------- | ------- |
+| mood_id | INT     |
+| user_id | INT     |
+| mood    | VARCHAR |
+| date    | DATE    |
+## Assessment
+| Field         | Type |
+| ------------- | ---- |
+| assessment_id | INT  |
+| user_id       | INT  |
+| score         | INT  |
+| date          | DATE |
+## Journal
+| Field      | Type |
+| ---------- | ---- |
+| journal_id | INT  |
+| user_id    | INT  |
+| content    | TEXT |
+| date       | DATE |
+## Tips
+| Field       | Type    |
+| ----------- | ------- |
+| tip_id      | INT     |
+| title       | VARCHAR |
+| description | TEXT    |
+
+# ER DIAGRAM DESIGN
+## Entities
+* USER
+* MOOD_TRACKER
+* ASSESSMENT
+* JOURNAL
+* TIPS
+* ADMIN
+## Relationships
+* USER records MOOD_TRACKER
+* USER takes ASSESSMENT
+* USER writes JOURNAL
+* ADMIN manages TIPS
+* ADMIN manages USERS
+
+# Use Case Diagram 
+    +-------------------+
+    |  Mental Health    |
+    | Support System    |
+    +-------------------+
+
+    USER
+      ├── Register
+      ├── Login
+      ├── Track Mood
+      ├── Take Assessment
+      ├── Write Journal
+      ├── View Tips
+      ├── View Reports
+      └── Logout
+
+    ADMIN
+      ├── Login
+      ├── Manage Users
+      ├── Manage Tips
+      ├── View Reports
+      ├── Monitor Activities
+      └── Logout
+
+ # SQL SCHEMA CREATION
+
+The SQL schema defines the database structure for the Digital Mental Health Support System. It includes tables for storing user information, mood records, assessments, journal entries, and wellness tips.
+
+## User Table
+
+```sql
+CREATE TABLE User (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    age INT
+);
+```
+
+## Mood_Tracker Table
+
+```sql
+CREATE TABLE Mood_Tracker (
+    mood_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    mood VARCHAR(50),
+    date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+```
+
+## Assessment Table
+
+```sql
+CREATE TABLE Assessment (
+    assessment_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    score INT,
+    date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+```
+
+## Journal Table
+
+```sql
+CREATE TABLE Journal (
+    journal_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    content TEXT,
+    date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+```
+
+## Tips Table
+
+```sql
+CREATE TABLE Tips (
+    tip_id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100),
+    description TEXT
+);
+```
+
+# PAGE LAYOUTS
+## Home Page
+* Welcome Message
+* About System
+* Login/Register Buttons
+## Dashboard
+* Mood Tracker
+* Assessment Section
+* Journal Section
+* Tips Section
+## Profile Page
+* User Details
+* Progress Report
+## Admin Dashboard
+* User Management
+* Resource Management
+* Reports
+
+## UI SCREENS
+ 1. Login Screen
+ 2. Registration Screen
+ 3. User Dashboard
+ 4. Mood Tracking Screen
+ 5. Assessment Screen
+ 6. Journal Screen
+ 7. Tips Screen
+ 8. Profile Screen
+ 9. Admin Dashboard
+
+# UI PROTOTYPE
+## Navigation Flow     
+    Home
+     │
+     ├── Login
+     │     │
+     │     └── Dashboard
+     │            │
+     │            ├── Mood Tracker
+     │            ├── Assessment
+     │            ├── Journal
+     │            ├── Tips
+     │            └── Profile
+     │
+     └── Register
+
+# LOGIN MODULE
+
+## Overview
+
+The Login Module is responsible for authenticating registered users and providing secure access to the Digital Mental Health Support System. It verifies user credentials before granting access to the application dashboard.
+
+## Features
+
+* User authentication
+* Email and password validation
+* Error handling for invalid credentials
+* Secure dashboard access
+* Session management
+
+## Components Used
+
+* Email Input Field
+* Password Input Field
+* Login Button
+* Validation Messages
+
+## Workflow
+
+1. User enters registered email and password.
+2. System validates the entered credentials.
+3. If credentials are correct, the user is redirected to the dashboard.
+4. If credentials are invalid, an error message is displayed.
+
+## Expected Outcome
+
+A secure login system that allows only authorized users to access the platform and its features.
+
+## Deliverable
+
+Functional Login Page with Authentication.
+     
+# REGISTRATION MODULE
+
+## Overview
+
+The Registration Module allows new users to create an account within the Digital Mental Health Support System. The module collects user information and stores it securely in the database for future authentication and access.
+
+## Features
+
+* New user registration
+* Form validation
+* Duplicate email verification
+* Secure data storage
+* User account creation
+
+## Registration Fields
+
+* Full Name
+* Email Address
+* Password
+* Confirm Password
+* Age
+
+## Workflow
+
+1. User fills in the registration form.
+2. System validates all required fields.
+3. Duplicate email addresses are checked.
+4. User information is stored in the database.
+5. Registration is completed successfully.
+
+# DASHBOARD DEVELOPMENT
+
+## Overview
+
+The Dashboard is the main interface of the Digital Mental Health Support System. After successful login, users are redirected to this page where they can access all major functionalities of the application.
+
+The dashboard is designed to provide a simple and organized view of mental health activities and resources.
+
+## Dashboard Sections
+
+* Mood Tracking
+* Self-Assessment
+* Journal Entries
+* Wellness Tips
+* Progress Reports
+* Profile Management
+
+## Key Functions
+
+* Quick navigation to all modules
+* Display of user activities
+* Access to mental health resources
+* Overview of emotional well-being records
+
+## User Flow
+
+1. User logs into the system.
+2. Dashboard loads user information.
+3. User selects desired module.
+4. System redirects to the corresponding feature page.
+
+# CRUD FORM DEVELOPMENT
+
+## Overview
+
+CRUD operations (Create, Read, Update, Delete) are implemented to manage user records and application data efficiently. These forms allow users and administrators to interact with the database through a structured interface.
+
+## Implemented Operations
+
+### Create
+
+* Add Mood Entry
+* Create Journal Entry
+* Submit Assessment
+
+### Read
+
+* View Mood Records
+* View Assessment History
+* View Journal Entries
+
+### Update
+
+* Edit Profile Information
+* Update Journal Entries
+
+### Delete
+
+* Remove Journal Entries
+* Delete Selected Records
+
+## Form Features
+
+* Input Validation
+* Error Handling
+* Database Integration
+* User-Friendly Interface
+
+
+
+# TABLE AND SEARCH FEATURES
+
+## Overview
+
+The Table and Search Module is developed to display stored data in a structured format and provide quick retrieval of information through search functionality.
+
+## Data Tables
+
+* Mood Tracking Records
+* Assessment Results
+* Journal Entries
+* User Information
+
+## Search Features
+
+* Search by Name
+* Search by Email
+* Search by Date
+* Keyword-Based Search
+
+## Functionalities
+
+* Dynamic Data Listing
+* Record Filtering
+* Search Result Display
+* Improved Data Accessibility
+
+## Workflow
+
+1. User accesses a data table.
+2. Search criteria are entered.
+3. System filters matching records.
+4. Results are displayed instantly.
+
+
+
+# FRONTEND TESTING
+
+## Overview
+
+Frontend testing is conducted to verify that all user interface components function correctly and provide a smooth user experience. The testing process ensures that pages load properly and user interactions behave as expected.
+
+## Modules Tested
+
+* Login Page
+* Registration Page
+* Dashboard
+* CRUD Forms
+* Search Features
+* Navigation Components
+
+## Testing Activities
+
+* Form Validation Testing
+* Button Functionality Testing
+* Page Navigation Testing
+* Responsive Design Testing
+* Error Message Verification
+
+## Observations
+
+* All pages loaded successfully.
+* Navigation links functioned correctly.
+* Form validations worked as expected.
+* No major UI issues were identified.
+
+# SPRING BOOT PROJECT SETUP
+
+## Overview
+
+Spring Boot is used to develop the backend services of the Digital Mental Health Support System. The framework simplifies backend development by providing built-in configurations, dependency management, and REST API support.
+
+## Tools and Technologies
+
+* Java
+* Spring Boot
+* Maven
+* MySQL
+* IntelliJ IDEA / VS Code
+
+## Initial Setup
+
+### Dependencies Added
+
+* Spring Web
+* Spring Data JPA
+* MySQL Driver
+* Spring Boot DevTools
+
+### Project Structure
+
+* Controller Layer
+* Service Layer
+* Repository Layer
+* Model Layer
+* Configuration Layer
+
+## Backend Responsibilities
+
+* User Authentication
+* Database Operations
+* API Management
+* Data Processing
+* Business Logic Handling
+
+
+
+
+
+
