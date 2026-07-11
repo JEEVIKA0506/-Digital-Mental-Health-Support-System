@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink, useNavigate } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import { createContext, useContext, useEffect, useState } from "react";
 import "./App.css";
 
@@ -88,8 +88,8 @@ function AuthPage() {
       login(users[email]);
     }
   }
-
-  return (
+return
+   (
     <div className="auth-page">
       <section className="auth-left">
         <div className="auth-badge">Healthcare Technology</div>
@@ -584,7 +584,8 @@ export default function App() {
 
   return (
     <AppContext.Provider value={{ user, login, logout, darkMode, setDarkMode, notifications, setNotifications }}>
-      <BrowserRouter>{user ? <ProtectedApp /> : <AuthPage />}</BrowserRouter>
+      <HashRouter>
+  {user ? <ProtectedApp /> : <AuthPage />}</HashRouter>
     </AppContext.Provider>
   );
 }
