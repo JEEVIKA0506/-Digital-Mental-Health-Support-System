@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/-Digital-Mental-Health-Support-System/static/css/main.25c40b63.css",
-    "main.js": "/-Digital-Mental-Health-Support-System/static/js/main.a3b6b2e7.js",
+    "main.js": "/-Digital-Mental-Health-Support-System/static/js/main.09fce962.js",
     "static/js/453.66c1fee7.chunk.js": "/-Digital-Mental-Health-Support-System/static/js/453.66c1fee7.chunk.js",
     "index.html": "/-Digital-Mental-Health-Support-System/index.html",
     "main.25c40b63.css.map": "/-Digital-Mental-Health-Support-System/static/css/main.25c40b63.css.map",
-    "main.a3b6b2e7.js.map": "/-Digital-Mental-Health-Support-System/static/js/main.a3b6b2e7.js.map",
+    "main.09fce962.js.map": "/-Digital-Mental-Health-Support-System/static/js/main.09fce962.js.map",
     "453.66c1fee7.chunk.js.map": "/-Digital-Mental-Health-Support-System/static/js/453.66c1fee7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25c40b63.css",
-    "static/js/main.a3b6b2e7.js"
+    "static/js/main.09fce962.js"
   ]
 }
