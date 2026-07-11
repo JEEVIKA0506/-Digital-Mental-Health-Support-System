@@ -88,8 +88,7 @@ function AuthPage() {
       login(users[email]);
     }
   }
-return
-   (
+return (
     <div className="auth-page">
       <section className="auth-left">
         <div className="auth-badge">Healthcare Technology</div>
