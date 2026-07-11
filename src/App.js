@@ -585,7 +585,8 @@ export default function App() {
   return (
     <AppContext.Provider value={{ user, login, logout, darkMode, setDarkMode, notifications, setNotifications }}>
       <HashRouter>
-  {user ? <ProtectedApp /> : <AuthPage />}</HashRouter>
+         {user ? <ProtectedApp /> : <AuthPage />}
+      </HashRouter>
     </AppContext.Provider>
   );
 }
